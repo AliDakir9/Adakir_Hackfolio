@@ -44,7 +44,7 @@ closeMenu.addEventListener('click', () => {
   mobileMenu.classList.remove('active');
 });
 
-// contact function
+// contact function EN
 
   (function(){
       emailjs.init("SF9ebLvTXvwkepT_O"); // from your EmailJS dashboard
@@ -61,4 +61,24 @@ closeMenu.addEventListener('click', () => {
           }, (error) => {
               failed.classList.add('active');
           });
+
+  });
+// contact function FR
+
+  (function(){
+      emailjs.init("SF9ebLvTXvwkepT_O"); // from your EmailJS dashboard
+  })();
+
+  document.getElementById('contact_fr').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const succ = document.querySelector('.send_message_succ');
+      const failed = document.querySelector('.send_message_failed');
+
+      emailjs.sendForm('service_t5rna2l', 'template_ztrdccm', this)
+          .then(() => {
+              succ.classList.add('active');
+          }, (error) => {
+              failed.classList.add('active');
+          });
+
   });
