@@ -337,6 +337,7 @@ h1 {
     padding: 8px;
     border: 1px solide var(--green-color);
     border-radius: 5px;
+    transition: 0.5s ease;
 }
 
 /* .socials i {
@@ -1128,5 +1129,6 @@ h1 {
     .btn-failed{
         font-size: 16px;
     }
+
 
 }
